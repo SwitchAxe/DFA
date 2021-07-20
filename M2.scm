@@ -15,7 +15,9 @@
 				((= current-state 0)
 					(m2-aux (list->string (cdr (string->list string))) 1))
 				((= current-state 1)
-					(m2-aux (list->string (cdr (string->list string))) 1))))))
+					(m2-aux (list->string (cdr (string->list string))) 1))))
+		(else
+			(display "the string must contain only 1s or 0s!"))))
 
 (define (m2 string)
 	(m2-aux string 0))
