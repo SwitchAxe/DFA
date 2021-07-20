@@ -1,3 +1,4 @@
+(import (rnrs exceptions))
 (define (m1-aux string current-state)
     (cond 
         ((equal? (string->list string) '())
@@ -32,4 +33,11 @@
 						"the string must only contain 1s or 0s!"))))))
 
 (define (m1 string)
-    (m1-aux string 0))
+    (cond
+        ((string? string)
+            (m1-aux string 0))
+        (else
+            (raise
+                (condition
+                    (make-error)
+                    (make-message-condition "this automaton expects a string!"))))))

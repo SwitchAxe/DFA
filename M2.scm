@@ -25,4 +25,11 @@
 						"the string must only contain 1s or 0s!"))))))
 
 (define (m2 string)
-	(m2-aux string 0))
+	(cond
+		((string? string)
+			(m2-aux string 0))
+		(else
+			(raise
+				(condition
+					(make-error)
+					(make-message-condition "this automaton expects a string!"))))))
