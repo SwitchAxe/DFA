@@ -29,7 +29,7 @@
 				(condition
 					(make-error)
 					(make-message-condition
-						"the string must only contain 1s or 0s!")))))
+						"the string must only contain 1s or 0s!"))))))
 
 (define (m1 string)
     (m1-aux string 0))
