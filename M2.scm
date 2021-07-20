@@ -1,3 +1,4 @@
+(import (rnrs exceptions))
 (define (m2-aux string current-state)
 	(cond
 		((equal? (string->list string) '())
@@ -17,7 +18,11 @@
 				((= current-state 1)
 					(m2-aux (list->string (cdr (string->list string))) 1))))
 		(else
-			(display "the string must contain only 1s or 0s!"))))
+			(raise 
+				(condition
+					(make-error)
+					(make-message-condition
+						"the string must only contain 1s or 0s!"))))))
 
 (define (m2 string)
 	(m2-aux string 0))
