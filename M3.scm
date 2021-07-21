@@ -1,4 +1,8 @@
 (import (rnrs exceptions))
+
+(display "Welcome to M3! This automaton expects a string consisting of 1s and 0s, and\n")
+(display "accepts all the strings ending with a 0 OR the empty string. Have fun!")
+
 (define (m3-aux string current-state)
     (cond
         ((equal? (string->list string) '())
@@ -18,7 +22,7 @@
             (raise 
                 (condition
                     (make-error)
-                    (make-message-condition "this automaton expects a string!"))))))
+                    (make-message-condition "the string must contain only 1s or 0s!"))))))
 
 (define (m3 string)
     (cond

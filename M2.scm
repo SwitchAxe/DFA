@@ -1,4 +1,8 @@
 (import (rnrs exceptions))
+
+(display "Welcome to M2! This automato expects a string consisting of 1s and 0s and\n")
+(display "accepts every string ending with a 1. Have fun!")
+
 (define (m2-aux string current-state)
 	(cond
 		((equal? (string->list string) '())

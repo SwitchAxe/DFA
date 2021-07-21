@@ -1,4 +1,10 @@
 (import (rnrs exceptions))
+
+(display "Welcome to M1! This automaton expects a string consisting of 1s and 0s and")
+(display "\naccepts every string ending with a 1 or with a 1 followed by an even number of 0s.\n")
+(display "Have fun!")
+
+
 (define (m1-aux string current-state)
     (cond 
         ((equal? (string->list string) '())
