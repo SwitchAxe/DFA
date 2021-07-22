@@ -1,5 +1,5 @@
 # DFA
-Some deterministic finite-state automata i've written in scheme. Taken directly from the book "Introduction to the theory of computation" by Michael Sipser.
+Some deterministic finite automata i've written in scheme. Taken from the book "Introduction to the theory of computation" by Michael Sipser and the internet.
 
 # Running the automata  
 (tested on chez-scheme) to run the automata, you just choose the file you want to run (each file is self-contained, meaning each automaton will
