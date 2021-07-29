@@ -1,4 +1,5 @@
-(display "Welcome to M5! this automaton accepts a string consisting of nonnegative integers")
+(import (rnrs exceptions))
+(display "Welcome to M5! this automaton expects a string consisting of nonnegative integers")
 (display "\n 0, 1, 2 and the 'r' (reset) symbol.")
 (display "\nIt accepts the string if the sum of its digits is a multiple of 3. Every time")
 (display "\nit meets the 'r' symbol the automaton resets the count to 0. Have fun!")
